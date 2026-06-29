@@ -926,6 +926,27 @@
       <article class="entry">
         <header class="entry__head">
           <span class="entry__no">[03]</span>
+          <h3 class="entry__title">sydes.sandbox</h3>
+          <span class="entry__meta">Self-initiated · 2026 · engine + UI</span>
+        </header>
+        <p class="entry__body">
+          A drag-and-drop <strong>system-design sandbox</strong>: draw a service topology on a canvas, press Run, and watch <strong>real Docker containers</strong> spin up under k6 load with per-service status and logs. A graph compiler translates the typed diagram (Service / Kafka / Worker / DB / Load Balancer nodes) into a <code>docker-compose.yml</code> plus nginx upstream config and a k6 script, inferring edge semantics — publish / subscribe / round-robin / DSN — from node types. Each experiment runs on its own isolated Docker bridge network and exercises a <strong>Saga chain</strong> (service → Kafka → worker → Postgres) end-to-end with Kafka consumer groups on KRaft. A local Fastify <strong>agent</strong> wraps the engine over HTTP/JSON for a React + React&nbsp;Flow browser canvas; seam/dependency-injection throughout keeps the whole engine unit-testable without Docker. <a href="https://github.com/duclong565/sydes" target="_blank" rel="noopener">source</a>.
+        </p>
+        <dl class="entry__data">
+          <dt>stack</dt>
+          <dd>
+            <span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Fastify</span><span class="tag">React</span><span class="tag">React&nbsp;Flow</span><span class="tag">Go</span><span class="tag">Docker</span><span class="tag">dockerode</span><span class="tag">Apache&nbsp;Kafka</span><span class="tag">PostgreSQL</span><span class="tag">nginx</span><span class="tag">k6</span><span class="tag">Vitest</span>
+          </dd>
+          <dt>impact</dt>
+          <dd class="impact">Graph → live Docker stack<span class="sep">·</span>Saga chain end-to-end<span class="sep">·</span>k6 load + live logs</dd>
+          <dt>pattern</dt>
+          <dd class="impact">Graph compiler · Isolated networks · Runner seam · Agent + SPA</dd>
+        </dl>
+      </article>
+
+      <article class="entry">
+        <header class="entry__head">
+          <span class="entry__no">[04]</span>
           <h3 class="entry__title">ncc_plus.principal_bot</h3>
           <span class="entry__meta">NCC+ · 2025 · 5mo · Intern</span>
         </header>
@@ -946,7 +967,7 @@
 
       <article class="entry">
         <header class="entry__head">
-          <span class="entry__no">[04]</span>
+          <span class="entry__no">[05]</span>
           <h3 class="entry__title">timesheet.management</h3>
           <span class="entry__meta">Graduation Thesis · 2025 · 3mo</span>
         </header>

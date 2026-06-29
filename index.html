@@ -518,6 +518,18 @@
     background: var(--accent-soft);
     padding: 0 4px;
   }
+  .entry__body a {
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 1px 8px;
+    margin: 0 1px;
+    white-space: nowrap;
+    transition: background 140ms var(--easing), color 140ms var(--easing);
+  }
+  .entry__body a::before { content: "↗ "; color: inherit; font-weight: 400; }
+  .entry__body a:hover { background: var(--accent); color: #ffffff; }
 
   .entry__data {
     display: grid;
